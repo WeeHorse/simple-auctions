@@ -11,8 +11,8 @@ Du behöver .NET 10 SDK och MySQL 8.0.16 eller senare (exempelvis MySQL 8.4).
 3. Skapa ett separat databaskonto. Kör med ett administratörskonto och välj ett eget lösenord:
 
 ```sql
-CREATE USER 'auctionuser'@'localhost' IDENTIFIED BY 'byt-till-eget-losenord';
-GRANT SELECT, INSERT, UPDATE, DELETE ON simple_auctions.* TO 'auctionuser'@'localhost';
+CREATE USER 'auctionuser'@'%' IDENTIFIED BY 'byt-till-eget-losenord';
+GRANT SELECT, INSERT, UPDATE, DELETE ON simple_auctions.* TO 'auctionuser'@'%';
 ```
 
 Anpassa host om MySQL körs i exempelvis Docker.
